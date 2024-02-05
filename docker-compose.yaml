@@ -9,7 +9,7 @@ services:
     networks:
       - macvlan-net
     volumes:
-      - ./omdata:/opt/omdata
+      - /home/user/project/omdata:/opt/omdata
     environment:
       - OM_KURENTO_WS_URL=ws://kurento:8888/kurento
       - OM_DB_TYPE=postgresql
@@ -36,7 +36,7 @@ services:
     networks:
       - macvlan-net
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - /home/user/project/data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=openmeetings
       - POSTGRES_PASSWORD=openmeetings
